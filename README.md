@@ -1,2 +1,2 @@
 # Dockerfiles
-Repository for the official DSocker images for the CloudOpting platform
+Repository for the official Docker images for the CloudOpting platform
