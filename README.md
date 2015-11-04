@@ -1,5 +1,5 @@
 # Docker bases
-Docker bases for CloudOpting platform
+Repository for the official Docker images for the CloudOpting platform
 
 # Use
 
