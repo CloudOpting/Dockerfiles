@@ -1,5 +1,6 @@
-# Docker bases
-Docker bases for CloudOpting platform
+# CentOS 7 CloudOpting base
+
+Docker base for CloudOpting platform based on CentOS 7
 
 # Use
 
@@ -9,10 +10,11 @@ Write a new _Dockerfile_ based on one of the base images.
 
 _Dockerfiles_ based on the base images must be compliant with these rules:
 
-- Reference the base image: `FROM cloudopting/ubuntubase:14.04`
+- Reference the base image: `FROM cloudopting/centosbase:7`
 - Do application specific stuff (if needed)
 - Do cleaning (if needed)
 - Add puppet related stuff (mandatory if you want to apply a manifest):
+
 ```
 ### Add puppet modules
 ADD modules /tmp/modules
@@ -28,19 +30,19 @@ RUN puppet apply --modulepath=/tmp/modules /tmp/manifest.pp
 
 ```Dockerfile
 # Use base
-FROM cloudopting/ubuntubase:14.04
+FROM cloudopting/centosbase:7
 
 # OPTIONAL:
 
 ### Specific application stuff
 RUN git clone https://github.com/someorg/somerepo
-RUN apt-get -yq update && apt-get install -y some-packages
+RUN yum -y -q update && yum -y install some-packages
 
 ### Cleaning
-RUN apt-get clean && rm -rf /var/lib/apt /var/cache/apt/archives/* /tmp/*
+RUN yum -y clean all && rm -rf /var/lib/yum /var/cache/yum /tmp/*
 
 
-# MANDATORY:
+# MANDATORY IF YOU WANT TO APPLY A PUPPET MANIFEST:
 ### Add puppet modules
 ADD modules /tmp/modules
 

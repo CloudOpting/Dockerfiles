@@ -1,5 +1,6 @@
-# Docker bases
-Docker bases for CloudOpting platform
+# Ubuntu 14.04 CloudOpting base
+
+Docker base for CloudOpting platform based on Ubuntu 14.04
 
 # Use
 
@@ -13,6 +14,7 @@ _Dockerfiles_ based on the base images must be compliant with these rules:
 - Do application specific stuff (if needed)
 - Do cleaning (if needed)
 - Add puppet related stuff (mandatory if you want to apply a manifest):
+
 ```
 ### Add puppet modules
 ADD modules /tmp/modules
@@ -40,7 +42,7 @@ RUN apt-get -yq update && apt-get install -y some-packages
 RUN apt-get clean && rm -rf /var/lib/apt /var/cache/apt/archives/* /tmp/*
 
 
-# MANDATORY:
+# MANDATORY IF YOU WANT TO APPLY A PUPPET MANIFEST:
 ### Add puppet modules
 ADD modules /tmp/modules
 
