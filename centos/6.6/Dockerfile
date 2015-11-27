@@ -4,9 +4,9 @@ MAINTAINER Jose Fuentes <jfuentes@wtelecom.es>
 RUN cp -r /var/lib/rpm /var/lib/rpm_bk
 RUN yum -y -q update && \
     rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm && \
-    yum -y -q install git puppet && \
+    yum -y -q install git puppet curl && \
     yum -y clean all && rm -rf /var/lib/yum /var/cache/yum /tmp/*
-RUN rm -rf /var/lib/rpm && cp -r /var/lib/rpm_bk /var/lib/rpm 
+RUN rm -rf /var/lib/rpm && cp -r /var/lib/rpm_bk /var/lib/rpm
 
 
 ### Inheritors must:
