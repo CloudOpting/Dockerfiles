@@ -4,7 +4,7 @@ MAINTAINER Jose Fuentes <jfuentes@wtelecom.es>
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get -yqq update && \
     apt-get -yqq remove console-setup ifupdown geoip-database && \
-    apt-get -yqq --no-install-recommends install puppet curl && \
+    apt-get -yqq --no-install-recommends install puppet curl tar && \
     apt-get clean && rm -rf /var/lib/apt /var/cache/apt/archives/* /tmp/* /var/tmp/*
 
 
