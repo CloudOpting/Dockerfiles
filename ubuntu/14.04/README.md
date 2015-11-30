@@ -2,6 +2,8 @@
 
 Docker base for CloudOpting platform based on Ubuntu 14.04
 
+Available on DockerHub: [cloudopting/ubuntubase:14.04](https://hub.docker.com/r/cloudopting/ubuntubase/)
+
 # Use
 
 Write a new _Dockerfile_ based on one of the base images.

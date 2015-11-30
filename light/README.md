@@ -1,6 +1,8 @@
 # Light base
 
-This is a very lightweight base built from scratch.
+This is a very lightweight base built from [scratch](https://hub.docker.com/_/scratch/).
+
+Available on DockerHub: [cloudopting/lightbase:latest](https://hub.docker.com/r/cloudopting/lightbase/)
 
 # Use
 

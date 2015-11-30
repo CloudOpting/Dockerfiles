@@ -2,6 +2,8 @@
 
 Docker base for CloudOpting platform based on CentOS 6.6
 
+Available on DockerHub: [cloudopting/centos:6.6](https://hub.docker.com/r/cloudopting/centosbase/)
+
 # Use
 
 Write a new _Dockerfile_ based on one of the base images.
