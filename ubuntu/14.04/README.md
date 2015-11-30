@@ -17,7 +17,7 @@ _Dockerfiles_ based on the base images must be compliant with these rules:
 - Do cleaning (if needed)
 - Add puppet related stuff (mandatory if you want to apply a manifest):
 
-```
+```dockerfile
 ### Add puppet modules
 ADD modules /tmp/modules
 
@@ -30,7 +30,7 @@ RUN puppet apply --modulepath=/tmp/modules /tmp/manifest.pp
 
 ## Example
 
-```Dockerfile
+```dockerfile
 # Use base
 FROM cloudopting/ubuntubase:14.04
 
